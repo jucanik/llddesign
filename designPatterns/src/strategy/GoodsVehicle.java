@@ -1,5 +1,4 @@
-import strategy.DriveStrategy;
-import strategy.NormalDriveStrategy;
+package strategy;
 
 public class GoodsVehicle extends Vehicle {
 

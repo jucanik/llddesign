@@ -1,5 +1,4 @@
-import strategy.DriveStrategy;
-
+package strategy;
 public class Vehicle {
 
   DriveStrategy driveStrategy;
