@@ -3,6 +3,8 @@ public class Address {
     String street;
     String block;
     String city;
+    String state;
+    String country;
     public String getStreet() {
         return street;
     }
@@ -33,7 +35,14 @@ public class Address {
     public void setCountry(String country) {
         this.country = country;
     }
-    String state;
-    String country;
+    public Address(String city, String country, String state) {
+        this.street = street;
+        this.block = block;
+        this.city = city;
+        this.state = state;
+        this.country = country;
+    }
+
+    
 
 }

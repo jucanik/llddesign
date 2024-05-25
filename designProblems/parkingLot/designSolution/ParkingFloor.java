@@ -16,6 +16,7 @@ public class ParkingFloor {
         ParkingSlot parkingSlot = null;
         ParkingSlotType parkingSlotType = pickCorrectSlotType(vehicle.getVehicleCategory());
         final Map<String, ParkingSlot> parkingSlotAvailableForSpecificedParkingSlotType = parkingSlots.get(parkingSlotType);
+        System.out.println("parking slot type is"+parkingSlotType);
         for(Map.Entry<String, ParkingSlot> mp : parkingSlotAvailableForSpecificedParkingSlotType.entrySet()){
             ParkingSlot currentParkingSlot = mp.getValue();
             if(currentParkingSlot.isAvailable()){
@@ -33,7 +34,7 @@ public class ParkingFloor {
             return ParkingSlotType.TwoWheeler;
 
             case Hatchback:
-            return ParkingSlotType.Medium;
+            return ParkingSlotType.Large;
 
             case SUV:
             return ParkingSlotType.Large;

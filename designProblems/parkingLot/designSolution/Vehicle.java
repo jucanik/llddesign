@@ -13,7 +13,7 @@ public class Vehicle {
     public VehicleCategory getVehicleCategory() {
         return vehicleCategory;
     }
-    public void setVehicleCategopry(VehicleCategory vehicleCategopry) {
+    public void setVehicleCategory(VehicleCategory vehicleCategopry) {
         this.vehicleCategory = vehicleCategopry;
     }
 }
