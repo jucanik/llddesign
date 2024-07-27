@@ -236,8 +236,70 @@ AbstractCalculator calc = new AbstractCalculator() {
 
         internally compiler provides a name
         When we want to override without creating any specific subclass.
+}
+
+parent object can hold the reference of the child object 
+
+
+Pojo (Plain old java object) Enum  Final class .
+
+Enum constants are static and final by default implicitly . No need to mention explicitly . Enum can not extend any class as it internally extends java.lang.enum class. it can implement interfaces. public Enum <EnumName>
+
+Enum can have variables , constructor, methods
+it can not be instantiated as constructor is private automatically created even if default is provided
+No other class extend enum class bacause Enum alreadst extends java.lang.enum
+it can have abstract method and all the constant need to implement the abstract method
+if we do not give any value to enum constants , internally value is assigned starting from zero and then increementing it to 1, 2 and so on.
+values() -> fetch all the constants . orddinal()-> default values assigned with constants starting from zero. value of() ->string is matched with the object  name()
+
+Any method we need to define in enum need to define as static .Becxause Enum can not be instantiated so to the access the method use static
+
+static members can not be overridden/ abstract . because static members are compile time but overriding is related to Runtime elements.
+But an abstract class can have static member functions and variables . If any subclass implements the method with same signature , then it is method hiding i.e Subclass has its own version of static method and super class has its own version of the static method
+A parent class constructor is not inherited in child class that's why super is automatically added in child constructor
+constructor can not be overriden . so it can not be static final or abstract. 
+
+singleton class -> create one and only one object of somre class like DB Connection and then use insert query
+1.Eager initialization (initialization in advance)
+2.Lazy initialization 3.Synchronization block 4.Double check lock (there is a memory issue , resolved through volatile instance variable) 
+5.Bill pugh solution  6.Enum singleton
+As soon as application started, all the static variables pre loded into memory. even though someone is not using it still it is stored into memory
+core -> cache -> memory
+omly one enum instance per jvm possible
+
+Reference variable contains the object of which class .this is determined in runtime. interface can holds the refernce of the classes which implements it. dynamically we are calling different object fly method . So it helkps to achieve polymorphism. Interface can be used as data type
+
+Multipleminheritance is possible only via interface
+
+insidevinterface all methods are implicitly public . methods canb not be dclared final 
+
+fields are publiuc static final by default as static final is used to define constants
+overriding method can not restrict the access specifier
+Nested interface can be declared within class  or within another interface
+
+Inner interface inside an interface can only be public . but inner interface inside a class can be protected or private.
+
+in java 8 / java9 method implementaion is also possible in interface
+
+// java 8 interface features ->
+-> Default method static method functional interface and lambda expression
+// default int getHeight() {
+//return 100;
+//}
+
+// Java 9 additional features
+Private method & private static method
+
+
+// //Compiler vs interpreter
+Compiler first Creates an executable file from the high level language and then execution is very first. Interpreter translayes line by line . so translation is fast and also executable file not generated .so execution is slow . Also conversion from high level to machine code is fast in interpreter in line by line. In interpreter errors are displayed fopr each single instruction.
+
+// metadata in java code -> annotation . during runtime using reflection, we can access
+// // Read metadata information using Reflection .i.e cl;ass filed parameter method.
+// annotations are metadata only . optional . use the information at runtime to add certain logic . access metadata via reflection
+
+// Predefined annotations -> @Deprecated @Override @Functional interface. @FunctionalInterface @SafeVarargs
+
+
 
 -->
-
--->
-
